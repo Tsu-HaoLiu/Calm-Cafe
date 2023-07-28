@@ -82,7 +82,7 @@ const handlers = {
 }
 
 browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    console.log('heard on background:', request); // For debugging
+    // console.log('heard on background:', request); // For debugging
 
     try {
         const status = handlers[request.type](request);
