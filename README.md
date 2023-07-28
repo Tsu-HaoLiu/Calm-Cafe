@@ -33,7 +33,7 @@ The extension is not yet published to the Chrome Web Store or Firefox Add-ons. T
 
 Please create an issue if you want more sounds to be added.
 
-https://github.com/Tsu-HaoLiu/sound-of-success/issues
+https://github.com/Tsu-HaoLiu/Calm-Cafe/issues
 
 
 ## Contributing
