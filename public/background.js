@@ -2,11 +2,13 @@
 let audioElements = {}; 
 
 const addAudio = (request) => {
-    audioElements[request.id] = new Audio(request.src); 
-    audioElements[request.id].loop = true;
-    audioElements[request.id].id = request.id;
-    audioElements[request.id].volume = request.volume / 100;
-    audioElements[request.id].play();
+    if(!audioElements[request.id]) {
+        audioElements[request.id] = new Audio(request.src); 
+        audioElements[request.id].loop = true;
+        audioElements[request.id].id = request.id;
+        audioElements[request.id].volume = request.volume / 100;
+        audioElements[request.id].play();
+    }
 }
 
 const getAudioInfo = (request) => {
@@ -80,7 +82,7 @@ const handlers = {
 }
 
 browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    // console.log('heard on background:', request); // For debugging
+    console.log('heard on background:', request); // For debugging
 
     try {
         const status = handlers[request.type](request);
@@ -89,5 +91,5 @@ browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
         console.warn(err);
         sendResponse({error: err.message});
     }
-    
+
 });
