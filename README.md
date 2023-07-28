@@ -10,17 +10,6 @@ This is a browser extension that plays ambient sounds to help you focus while wo
 - Reset/Mute all sounds
 - Dark mode 
 
-
-## Installation
-
-The extension is not yet published to the Chrome Web Store or Firefox Add-ons. To install it locally:
-
-- Clone this repository
-- Go to Chrome/Firefox Extensions page and enable Developer mode
-- Click on "Load unpacked" and select the extension folder
-- The extension should now be installed
-
-
 ## Usage
 
 - Click on the browser extension icon to open the ambient sounds panel
@@ -29,17 +18,16 @@ The extension is not yet published to the Chrome Web Store or Firefox Add-ons. T
 - Click the pause button to pause all sounds
 - Click the mute button to reset/mute all sounds
 
-## Development
+## Installation / Development
 
-The src folder contains the React code for the extension UI.
+The extension is not yet published to the Chrome Web Store or Firefox Add-ons. To install it locally:
 
-Tailwind CSS classes are used for styling.
-
-To develop:
-
-- Run npm install to install dependencies
-- Run npm run build to build the extension
-- Load the extension in your browser and it will auto-reload on changes
+- Clone this repository
+- Run `npm install` to install dependencies
+- Run `npm run build` to build the extension
+- Go to Chrome/Firefox Extensions page and enable Developer mode
+- Click on "Load unpacked" and select the extension folder
+- The extension should now be installed
 
 ## Adding more sounds
 
@@ -60,3 +48,4 @@ Suggestions and pull requests are welcomed!
 - Better logging
 - Add hover effects to Header buttons
 - Add footer w/ more info
+- Custom audio uploads
