@@ -49,3 +49,4 @@ Suggestions and pull requests are welcomed!
 - Add hover effects to Header buttons
 - Add footer w/ more info
 - Custom audio uploads
+- Save settings
