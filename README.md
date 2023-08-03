@@ -1,6 +1,7 @@
 # Calm Café Sounds
 
 This is a browser extension that plays ambient sounds to help you focus while working or studying. It is built with JavaScript, React, and Tailwind CSS.
+
 Get it on firefox: https://addons.mozilla.org/en-US/firefox/addon/calm-cafe/
 
 ## Features
