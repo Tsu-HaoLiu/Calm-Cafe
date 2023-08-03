@@ -6,8 +6,7 @@ Get it on firefox: https://addons.mozilla.org/en-US/firefox/addon/calm-cafe/
 
 ## Screenshot
 
-![image](https://github.com/Tsu-HaoLiu/Calm-Cafe/assets/96331813/962d55bb-146e-4d26-976e-8bcd875d1994)
-
+![image](https://github.com/Tsu-HaoLiu/Calm-Cafe/assets/96331813/bc1c28fa-d03c-413e-88a5-612e07128f86)
 
 
 ## Features
