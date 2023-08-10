@@ -51,14 +51,14 @@ const Header = () => {
                     <img
                         src={paused ? pause : play}
                         alt='pause-button'
-                        className='w-8 h-7 object-contain cursor-pointer'
+                        className='w-8 h-7 object-contain cursor-pointer hover:scale-110 hover:fill-white'
                         onClick={handlePause}
                     />
 
                     <img
                         src={mute}
                         alt='mute-button'
-                        className='w-8 h-7 object-contain cursor-pointer'
+                        className='w-8 h-7 object-contain cursor-pointer hover:scale-110 hover:fill-white'
                         onClick={muteAll}
                     />
                 </div>
