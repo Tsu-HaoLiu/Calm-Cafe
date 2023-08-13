@@ -18,7 +18,8 @@
         "service_worker": "./background.js"
     },
     "permissions": [
-        "storage"
+        "storage",
+        "offscreen"
     ],
     "icons": {
       "192": "assets/icon192.svg",
