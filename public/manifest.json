@@ -1,12 +1,12 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Calm Café Sounds",
     "author": "Tsu-Hao Liu",
     "homepage_url": "https://tsuhao.com",
     "version": "2023.7.1",
     "description": "Listen to ambient background sounds while studying or doing focus work.",
   
-    "browser_action": {
+    "action": {
       "default_popup": "index.html",
       "default_title": "Calm Café Sounds",
       "default_icon": {
@@ -15,10 +15,11 @@
         }
     },
     "background": {
-        "scripts": ["./background.js"]
+        "service_worker": "./background.js"
     },
     "permissions": [
-        "storage"
+        "storage",
+        "offscreen"
     ],
     "icons": {
       "192": "assets/icon192.svg",
