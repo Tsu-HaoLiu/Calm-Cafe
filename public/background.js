@@ -1,4 +1,4 @@
-
+const browser=chrome;
 let audioElements = {}; 
 
 const addAudio = (request) => {
