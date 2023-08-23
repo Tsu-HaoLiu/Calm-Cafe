@@ -10,5 +10,5 @@ export {
     play,
     pause,
     mute,
-    headphone
+    headphone,
 };
