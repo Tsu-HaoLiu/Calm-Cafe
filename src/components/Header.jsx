@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-import { play, pause, mute, headphone } from "../assets";
+import { headphone } from "../assets";
+import MuteButton from "../assets/MuteButton";
+import PauseButton from "../assets/PauseButton";
+import PlayButton from "../assets/PlayButton";
 import { sendMessage, styles } from "../utils";
 import eventBus from './EventBus';
 
@@ -10,6 +13,7 @@ const muteAll = () => {
 }
 
 const Header = () => {
+    const [muteClick, setMuteClick] = useState(false)
     const [scrolled, setScrolled] = useState(false);
     const [paused, setPaused] = useState(true);
 
@@ -36,6 +40,12 @@ const Header = () => {
         setPaused(!paused);
     }
 
+    const handleMuteClick = () => {
+        setMuteClick(!muteClick)
+    }
+
+    const buttonColor = muteClick ? '#c6c6c6' : '#ffffff'
+
     return (
         <nav
         className={'px-6 w-full flex items-center py-3 fixed top-0 bg-primary backdrop-blur-lg'}
@@ -48,19 +58,23 @@ const Header = () => {
                 </p>
 
                 <div className='flex flex-1 justify-end items-center'>
-                    <img
-                        src={paused ? pause : play}
-                        alt='pause-button'
-                        className='w-8 h-7 object-contain cursor-pointer hover:scale-110 hover:fill-white'
-                        onClick={handlePause}
-                    />
 
-                    <img
-                        src={mute}
-                        alt='mute-button'
-                        className='w-8 h-7 object-contain cursor-pointer hover:scale-110 hover:fill-white'
-                        onClick={muteAll}
-                    />
+                    <div 
+                        className="w-8 h-7 object-contain cursor-pointer hover:scale-110 hover:fill-white" 
+                        onClick={handlePause}
+                    >
+                        {paused ? <PauseButton /> : <PlayButton />}
+                    </div>
+
+                    <div 
+                        className='w-8 h-7 object-contain cursor-pointer hover:scale-110'
+                        onClick={() => {
+                            handleMuteClick()
+                            muteAll()
+                        }}
+                    >
+                        <MuteButton fill={buttonColor}/>
+                    </div>
                 </div>
             </div>
         </nav>
